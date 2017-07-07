@@ -10,7 +10,7 @@ import java.util.UUID;
  * Created by chath on 7/7/2017.
  */
 
-//@Entity
+@Entity
 public class Reading {
 
     @Id

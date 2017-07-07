@@ -16,9 +16,7 @@ public class VehicleRepoImpl implements VehicleRepo
     @PersistenceContext
     private EntityManager em;
     public Vehicle create(Vehicle vehicle) {
-        System.out.println("Repo create");
         em.persist(vehicle);
-        System.out.println("Repo return");
         return vehicle;
     }
 

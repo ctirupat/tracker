@@ -24,23 +24,17 @@ public class VehicleServiceImpl implements VehicleService {
     public List<Vehicle> create(Vehicle[] vehicles) {
         List<Vehicle> res = new ArrayList<Vehicle>();
         for (Vehicle vehicle : vehicles) {
-            System.out.println("Service");
-            if (findOne(vehicle.getVin()) != null) {
-                System.out.println("if");
+           if (findOne(vehicle.getVin()) != null) {
                 vehicle = vr.update(vehicle);
             } else {
-                System.out.println("else");
-                vehicle = vr.create(vehicle);
+              vehicle = vr.create(vehicle);
             }
-            System.out.println("add");
             res.add(vehicle);
         }
-        System.out.println(res);
         return res;
     }
     @Transactional(readOnly = true)
     public Vehicle findOne(String vin) {
-        System.out.println("findone");
         return vr.findOne(vin);
     }
 }

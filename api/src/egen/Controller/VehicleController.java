@@ -20,8 +20,7 @@ public class VehicleController {
     VehicleService vhs;
     @RequestMapping(method = RequestMethod.PUT)
     public List<Vehicle> create(@RequestBody Vehicle vehicles[]){
-        System.out.print("Vehicle");
-        return vhs.create(vehicles);
+       return vhs.create(vehicles);
     }
 
 

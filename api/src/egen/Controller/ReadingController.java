@@ -3,13 +3,15 @@ package egen.Controller;
 import egen.Entity.Reading;
 import egen.Service.ReadingService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by chath on 7/7/2017.
  */
+
+@CrossOrigin(origins = "http://mocker.egen.io", maxAge=3600)
+@RestController
+@RequestMapping(value="readings")
 public class ReadingController {
 
     @Autowired
